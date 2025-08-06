@@ -1,0 +1,4 @@
+/home/prudy/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/HardwareStatus.idl
+/home/prudy/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/ComputerRectangleArea.idl
+/home/prudy/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:srv/SetLed.idl
+/home/prudy/ros2_ws/src/build/my_robot_interfaces/rosidl_adapter/my_robot_interfaces:msg/LedState.idl

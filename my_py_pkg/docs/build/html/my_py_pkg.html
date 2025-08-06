@@ -1,0 +1,626 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my_py_pkg package &mdash; my robot 1.0.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=8d563738"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="my robot documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            my robot
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">my_py_pkg package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.LED_panel_server">my_py_pkg.LED_panel_server module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.LED_panel_server.LedPanelNode"><code class="docutils literal notranslate"><span class="pre">LedPanelNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.LED_panel_server.LedPanelNode.callback_set_led"><code class="docutils literal notranslate"><span class="pre">LedPanelNode.callback_set_led()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.LED_panel_server.LedPanelNode.publish_led_state"><code class="docutils literal notranslate"><span class="pre">LedPanelNode.publish_led_state()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.LED_panel_server.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.add_two_ints_client_no_oop">my_py_pkg.add_two_ints_client_no_oop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.add_two_ints_client_no_oop.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.add_two_ints_client_oop">my_py_pkg.add_two_ints_client_oop module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients"><code class="docutils literal notranslate"><span class="pre">AddTwoIntsClients</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.call_add_two_ints"><code class="docutils literal notranslate"><span class="pre">AddTwoIntsClients.call_add_two_ints()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.callback_call_add_two_ints"><code class="docutils literal notranslate"><span class="pre">AddTwoIntsClients.callback_call_add_two_ints()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.add_two_ints_client_oop.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.add_two_ints_server">my_py_pkg.add_two_ints_server module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.add_two_ints_server.AddTwoIntServerNode"><code class="docutils literal notranslate"><span class="pre">AddTwoIntServerNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.add_two_ints_server.AddTwoIntServerNode.callback_add_two_ints"><code class="docutils literal notranslate"><span class="pre">AddTwoIntServerNode.callback_add_two_ints()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.add_two_ints_server.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.battery_client">my_py_pkg.battery_client module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.battery_client.BatteryClientNode"><code class="docutils literal notranslate"><span class="pre">BatteryClientNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.battery_client.BatteryClientNode.call_battery_client"><code class="docutils literal notranslate"><span class="pre">BatteryClientNode.call_battery_client()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.battery_client.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.hardware_status_publisher">my_py_pkg.hardware_status_publisher module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.hardware_status_publisher"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode.hardware_status_publisher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.timer"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode.timer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.__init__"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.publish_status"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode.publish_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id0"><code class="docutils literal notranslate"><span class="pre">HardwareStatusPublisherNode.publish_status()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.hardware_status_publisher.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.my_first_node">my_py_pkg.my_first_node module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.my_first_node.MyNode"><code class="docutils literal notranslate"><span class="pre">MyNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.my_first_node.MyNode.timer_callback"><code class="docutils literal notranslate"><span class="pre">MyNode.timer_callback()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.my_first_node.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.number_counter">my_py_pkg.number_counter module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.number_counter.NumberCounterNode"><code class="docutils literal notranslate"><span class="pre">NumberCounterNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_counter.NumberCounterNode.callback_number_counter"><code class="docutils literal notranslate"><span class="pre">NumberCounterNode.callback_number_counter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_counter.NumberCounterNode.callback_number_counter_service"><code class="docutils literal notranslate"><span class="pre">NumberCounterNode.callback_number_counter_service()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.number_counter.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.number_publisher">my_py_pkg.number_publisher module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode.number"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode.number</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode.timer_period"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode.timer_period</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode.number_publisher"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode.number_publisher</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode.timer"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode.timer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.number_publisher.NumberPublisherNode.callback_number_publisher"><code class="docutils literal notranslate"><span class="pre">NumberPublisherNode.callback_number_publisher()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.number_publisher.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.python_node_template">my_py_pkg.python_node_template module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.python_node_template.MyCustomNode"><code class="docutils literal notranslate"><span class="pre">MyCustomNode</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.python_node_template.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.robot_news_station">my_py_pkg.robot_news_station module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode.robot_name"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.robot_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode.timer"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.timer</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode.publisher_"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.publisher_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode.timer_"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.timer_</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.robot_news_station.RobotNewStationNode.publish_news"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.publish_news()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1"><code class="docutils literal notranslate"><span class="pre">RobotNewStationNode.publish_news()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.robot_news_station.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#module-my_py_pkg.smartphone">my_py_pkg.smartphone module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.smartphone.SmartphoneNode"><code class="docutils literal notranslate"><span class="pre">SmartphoneNode</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.smartphone.SmartphoneNode.suscriber"><code class="docutils literal notranslate"><span class="pre">SmartphoneNode.suscriber</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.smartphone.SmartphoneNode.__init__"><code class="docutils literal notranslate"><span class="pre">SmartphoneNode.__init__()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#my_py_pkg.smartphone.SmartphoneNode.callback_robot_news"><code class="docutils literal notranslate"><span class="pre">SmartphoneNode.callback_robot_news()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#my_py_pkg.smartphone.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">my robot</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">my_py_pkg package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/my_py_pkg.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="my-py-pkg-package">
+<h1>my_py_pkg package<a class="headerlink" href="#my-py-pkg-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-my_py_pkg.LED_panel_server">
+<span id="my-py-pkg-led-panel-server-module"></span><h2>my_py_pkg.LED_panel_server module<a class="headerlink" href="#module-my_py_pkg.LED_panel_server" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.LED_panel_server.LedPanelNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.LED_panel_server.</span></span><span class="sig-name descname"><span class="pre">LedPanelNode</span></span><a class="reference internal" href="_modules/my_py_pkg/LED_panel_server.html#LedPanelNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.LED_panel_server.LedPanelNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.LED_panel_server.LedPanelNode.callback_set_led">
+<span class="sig-name descname"><span class="pre">callback_set_led</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/LED_panel_server.html#LedPanelNode.callback_set_led"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.LED_panel_server.LedPanelNode.callback_set_led" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.LED_panel_server.LedPanelNode.publish_led_state">
+<span class="sig-name descname"><span class="pre">publish_led_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/LED_panel_server.html#LedPanelNode.publish_led_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.LED_panel_server.LedPanelNode.publish_led_state" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.LED_panel_server.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.LED_panel_server.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/LED_panel_server.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.LED_panel_server.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.add_two_ints_client_no_oop">
+<span id="my-py-pkg-add-two-ints-client-no-oop-module"></span><h2>my_py_pkg.add_two_ints_client_no_oop module<a class="headerlink" href="#module-my_py_pkg.add_two_ints_client_no_oop" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_client_no_oop.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.add_two_ints_client_no_oop.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_client_no_oop.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_client_no_oop.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.add_two_ints_client_oop">
+<span id="my-py-pkg-add-two-ints-client-oop-module"></span><h2>my_py_pkg.add_two_ints_client_oop module<a class="headerlink" href="#module-my_py_pkg.add_two_ints_client_oop" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.add_two_ints_client_oop.</span></span><span class="sig-name descname"><span class="pre">AddTwoIntsClients</span></span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_client_oop.html#AddTwoIntsClients"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.call_add_two_ints">
+<span class="sig-name descname"><span class="pre">call_add_two_ints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_client_oop.html#AddTwoIntsClients.call_add_two_ints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.call_add_two_ints" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.callback_call_add_two_ints">
+<span class="sig-name descname"><span class="pre">callback_call_add_two_ints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">future</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">request</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_client_oop.html#AddTwoIntsClients.callback_call_add_two_ints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_client_oop.AddTwoIntsClients.callback_call_add_two_ints" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_client_oop.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.add_two_ints_client_oop.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_client_oop.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_client_oop.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.add_two_ints_server">
+<span id="my-py-pkg-add-two-ints-server-module"></span><h2>my_py_pkg.add_two_ints_server module<a class="headerlink" href="#module-my_py_pkg.add_two_ints_server" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_server.AddTwoIntServerNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.add_two_ints_server.</span></span><span class="sig-name descname"><span class="pre">AddTwoIntServerNode</span></span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_server.html#AddTwoIntServerNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_server.AddTwoIntServerNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_server.AddTwoIntServerNode.callback_add_two_ints">
+<span class="sig-name descname"><span class="pre">callback_add_two_ints</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AddTwoInts_Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">AddTwoInts_Response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_server.html#AddTwoIntServerNode.callback_add_two_ints"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_server.AddTwoIntServerNode.callback_add_two_ints" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.add_two_ints_server.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.add_two_ints_server.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/add_two_ints_server.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.add_two_ints_server.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.battery_client">
+<span id="my-py-pkg-battery-client-module"></span><h2>my_py_pkg.battery_client module<a class="headerlink" href="#module-my_py_pkg.battery_client" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.battery_client.BatteryClientNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.battery_client.</span></span><span class="sig-name descname"><span class="pre">BatteryClientNode</span></span><a class="reference internal" href="_modules/my_py_pkg/battery_client.html#BatteryClientNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.battery_client.BatteryClientNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.battery_client.BatteryClientNode.call_battery_client">
+<span class="sig-name descname"><span class="pre">call_battery_client</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">b</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/battery_client.html#BatteryClientNode.call_battery_client"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.battery_client.BatteryClientNode.call_battery_client" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.battery_client.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.battery_client.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/battery_client.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.battery_client.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.hardware_status_publisher">
+<span id="my-py-pkg-hardware-status-publisher-module"></span><h2>my_py_pkg.hardware_status_publisher module<a class="headerlink" href="#module-my_py_pkg.hardware_status_publisher" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.hardware_status_publisher.</span></span><span class="sig-name descname"><span class="pre">HardwareStatusPublisherNode</span></span><a class="reference internal" href="_modules/my_py_pkg/hardware_status_publisher.html#HardwareStatusPublisherNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<p>A ROS2 node that publishes hardware status messages at regular intervals.</p>
+<p>This node is responsible for periodically publishing the status of hardware components
+to the ‘hardware_status’ topic using the <cite>HardwareStatus</cite> message type. It is intended
+to be used as a monitoring component within a ROS2 system, providing real-time updates
+about the hardware’s operational state.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.hardware_status_publisher">
+<span class="sig-name descname"><span class="pre">hardware_status_publisher</span></span><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.hardware_status_publisher" title="Link to this definition"></a></dt>
+<dd><p>The ROS2 publisher object used to send
+<cite>HardwareStatus</cite> messages on the ‘hardware_status’ topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Publisher</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.timer">
+<span class="sig-name descname"><span class="pre">timer</span></span><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.timer" title="Link to this definition"></a></dt>
+<dd><p>A ROS2 timer that triggers the periodic execution of the
+<cite>publish_status</cite> method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/hardware_status_publisher.html#HardwareStatusPublisherNode.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initializes the node, sets up the publisher and timer, and logs a startup message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.publish_status">
+<span class="sig-name descname"><span class="pre">publish_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/hardware_status_publisher.html#HardwareStatusPublisherNode.publish_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.HardwareStatusPublisherNode.publish_status" title="Link to this definition"></a></dt>
+<dd><p>Callback function executed by the timer. Constructs a <cite>HardwareStatus</cite> message,
+sets its fields (e.g., <cite>are_motors_ready</cite>, <cite>debug_message</cite>), and publishes it
+to the ‘hardware_status’ topic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">publish_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/hardware_status_publisher.html#HardwareStatusPublisherNode.publish_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.hardware_status_publisher.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.hardware_status_publisher.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/hardware_status_publisher.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.hardware_status_publisher.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.my_first_node">
+<span id="my-py-pkg-my-first-node-module"></span><h2>my_py_pkg.my_first_node module<a class="headerlink" href="#module-my_py_pkg.my_first_node" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.my_first_node.MyNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.my_first_node.</span></span><span class="sig-name descname"><span class="pre">MyNode</span></span><a class="reference internal" href="_modules/my_py_pkg/my_first_node.html#MyNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.my_first_node.MyNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.my_first_node.MyNode.timer_callback">
+<span class="sig-name descname"><span class="pre">timer_callback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/my_first_node.html#MyNode.timer_callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.my_first_node.MyNode.timer_callback" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.my_first_node.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.my_first_node.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/my_first_node.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.my_first_node.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.number_counter">
+<span id="my-py-pkg-number-counter-module"></span><h2>my_py_pkg.number_counter module<a class="headerlink" href="#module-my_py_pkg.number_counter" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.number_counter.NumberCounterNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.number_counter.</span></span><span class="sig-name descname"><span class="pre">NumberCounterNode</span></span><a class="reference internal" href="_modules/my_py_pkg/number_counter.html#NumberCounterNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_counter.NumberCounterNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.number_counter.NumberCounterNode.callback_number_counter">
+<span class="sig-name descname"><span class="pre">callback_number_counter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Int64</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/number_counter.html#NumberCounterNode.callback_number_counter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_counter.NumberCounterNode.callback_number_counter" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.number_counter.NumberCounterNode.callback_number_counter_service">
+<span class="sig-name descname"><span class="pre">callback_number_counter_service</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SetBool_Request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">response</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SetBool_Response</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/number_counter.html#NumberCounterNode.callback_number_counter_service"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_counter.NumberCounterNode.callback_number_counter_service" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.number_counter.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.number_counter.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/number_counter.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_counter.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.number_publisher">
+<span id="my-py-pkg-number-publisher-module"></span><h2>my_py_pkg.number_publisher module<a class="headerlink" href="#module-my_py_pkg.number_publisher" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.number_publisher.</span></span><span class="sig-name descname"><span class="pre">NumberPublisherNode</span></span><a class="reference internal" href="_modules/my_py_pkg/number_publisher.html#NumberPublisherNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<p>A ROS2 node that periodically publishes an integer value to the ‘number’ topic.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode.number">
+<span class="sig-name descname"><span class="pre">number</span></span><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode.number" title="Link to this definition"></a></dt>
+<dd><p>The integer value to publish.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode.timer_period">
+<span class="sig-name descname"><span class="pre">timer_period</span></span><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode.timer_period" title="Link to this definition"></a></dt>
+<dd><p>The interval in seconds between publishes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode.number_publisher">
+<span class="sig-name descname"><span class="pre">number_publisher</span></span><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode.number_publisher" title="Link to this definition"></a></dt>
+<dd><p>The ROS2 publisher for the ‘number’ topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Publisher</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode.timer">
+<span class="sig-name descname"><span class="pre">timer</span></span><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode.timer" title="Link to this definition"></a></dt>
+<dd><p>The ROS2 timer that triggers periodic publishing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.NumberPublisherNode.callback_number_publisher">
+<span class="sig-name descname"><span class="pre">callback_number_publisher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/number_publisher.html#NumberPublisherNode.callback_number_publisher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_publisher.NumberPublisherNode.callback_number_publisher" title="Link to this definition"></a></dt>
+<dd><p>Callback function that publishes the configured integer value to the ‘number’ topic.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.number_publisher.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.number_publisher.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/number_publisher.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.number_publisher.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.python_node_template">
+<span id="my-py-pkg-python-node-template-module"></span><h2>my_py_pkg.python_node_template module<a class="headerlink" href="#module-my_py_pkg.python_node_template" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.python_node_template.MyCustomNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.python_node_template.</span></span><span class="sig-name descname"><span class="pre">MyCustomNode</span></span><a class="reference internal" href="_modules/my_py_pkg/python_node_template.html#MyCustomNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.python_node_template.MyCustomNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.python_node_template.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.python_node_template.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/python_node_template.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.python_node_template.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.robot_news_station">
+<span id="my-py-pkg-robot-news-station-module"></span><h2>my_py_pkg.robot_news_station module<a class="headerlink" href="#module-my_py_pkg.robot_news_station" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.robot_news_station.</span></span><span class="sig-name descname"><span class="pre">RobotNewStationNode</span></span><a class="reference internal" href="_modules/my_py_pkg/robot_news_station.html#RobotNewStationNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<p>A ROS2 node that publishes periodic news messages with a robot’s name.</p>
+<dl class="simple">
+<dt>This node declares two parameters:</dt><dd><ul class="simple">
+<li><p>‘robot_name’ (str): The name of the robot to include in the news message. Default is “CP30”.</p></li>
+<li><p>‘timer’ (float): The interval in seconds between published messages. Default is 1.0.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode.robot_name">
+<span class="sig-name descname"><span class="pre">robot_name</span></span><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode.robot_name" title="Link to this definition"></a></dt>
+<dd><p>The name of the robot, retrieved from the ‘robot_name’ parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode.timer">
+<span class="sig-name descname"><span class="pre">timer</span></span><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode.timer" title="Link to this definition"></a></dt>
+<dd><p>The timer interval, retrieved from the ‘timer’ parameter.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode.publisher_">
+<span class="sig-name descname"><span class="pre">publisher_</span></span><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode.publisher_" title="Link to this definition"></a></dt>
+<dd><p>Publishes String messages to the ‘robot_news’ topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Publisher</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode.timer_">
+<span class="sig-name descname"><span class="pre">timer_</span></span><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode.timer_" title="Link to this definition"></a></dt>
+<dd><p>Calls the ‘publish_news’ method at the specified interval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Timer</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.RobotNewStationNode.publish_news">
+<span class="sig-name descname"><span class="pre">publish_news</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/robot_news_station.html#RobotNewStationNode.publish_news"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.robot_news_station.RobotNewStationNode.publish_news" title="Link to this definition"></a></dt>
+<dd><p>Publishes a String message to the ‘robot_news’ topic containing the robot’s name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">publish_news</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/robot_news_station.html#RobotNewStationNode.publish_news"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.robot_news_station.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.robot_news_station.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/robot_news_station.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.robot_news_station.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-my_py_pkg.smartphone">
+<span id="my-py-pkg-smartphone-module"></span><h2>my_py_pkg.smartphone module<a class="headerlink" href="#module-my_py_pkg.smartphone" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="my_py_pkg.smartphone.SmartphoneNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">my_py_pkg.smartphone.</span></span><span class="sig-name descname"><span class="pre">SmartphoneNode</span></span><a class="reference internal" href="_modules/my_py_pkg/smartphone.html#SmartphoneNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.smartphone.SmartphoneNode" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Node</span></code></p>
+<p>A ROS2 node that subscribes to the ‘robot_news’ topic and logs incoming messages.</p>
+<p>This node is intended to simulate a smartphone device that receives news updates from a robot.
+Upon initialization, it creates a subscription to the ‘robot_news’ topic, expecting messages of type <cite>String</cite>.
+Whenever a new message is received, the <cite>callback_robot_news</cite> method is triggered, which logs the content of the message.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="my_py_pkg.smartphone.SmartphoneNode.suscriber">
+<span class="sig-name descname"><span class="pre">suscriber</span></span><a class="headerlink" href="#my_py_pkg.smartphone.SmartphoneNode.suscriber" title="Link to this definition"></a></dt>
+<dd><p>The subscription object for the ‘robot_news’ topic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Subscription</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.smartphone.SmartphoneNode.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/smartphone.html#SmartphoneNode.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.smartphone.SmartphoneNode.__init__" title="Link to this definition"></a></dt>
+<dd><p>Initializes the SmartphoneNode, sets up the subscription, and logs a startup message.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py">
+<span class="sig-name descname"><span class="pre">callback_robot_news(msg</span></span></dt>
+<dd><p>String):
+Callback function that logs the data received from the ‘robot_news’ topic.</p>
+</dd></dl>
+
+<dl class="simple">
+<dt>Usage:</dt><dd><p>Instantiate this class within a ROS2 Python node to listen for and log robot news updates.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="my_py_pkg.smartphone.SmartphoneNode.callback_robot_news">
+<span class="sig-name descname"><span class="pre">callback_robot_news</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">String</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/smartphone.html#SmartphoneNode.callback_robot_news"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.smartphone.SmartphoneNode.callback_robot_news" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="my_py_pkg.smartphone.main">
+<span class="sig-prename descclassname"><span class="pre">my_py_pkg.smartphone.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/my_py_pkg/smartphone.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#my_py_pkg.smartphone.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="my robot documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, prudence.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
